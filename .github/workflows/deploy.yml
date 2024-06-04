@@ -42,4 +42,4 @@ jobs:
         run: npm run build
 
       - name: Deploy
-        run: aws s3 cp --recursive --region ${{ env.AWS_REGION }} dist/ s3:${{ env.S3_BUCKET }}
+        run: aws s3 cp --recursive --region ${{ env.AWS_REGION }} dist/ s3://${{ env.S3_BUCKET }}/
